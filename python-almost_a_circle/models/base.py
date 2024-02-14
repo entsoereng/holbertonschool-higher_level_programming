@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 """
-Defines a base model class.
+    Defines a base model class.
 """
 class Base:
     """
-    Represents the base model.
+        Represents the base model.
     """
     __nb_objects = 0
     
