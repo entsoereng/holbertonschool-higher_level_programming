@@ -2,7 +2,7 @@
 """
 Defines a base model class.
 """
-Class Base:
+class Base:
     """
     Represents the base model.
     """
