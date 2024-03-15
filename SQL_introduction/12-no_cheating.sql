@@ -1,6 +1,5 @@
--- List all records in the table second_table with a score >= 10.
--- Records are ordered by descending score.
-SELECT `score`, `name`
-FROM `second_table`
-WHERE `score` >= 10
-ORDER BY `score` DESC;
+-- Script that updates the score of Bob to 10 in the table second_table
+-- SQL command to update the score of a person to 10 based on their name
+UPDATE second_table
+SET score = 10
+WHERE name = 'Bob';
