@@ -1,8 +1,15 @@
--- Create the database hbtn_0d_usa and table cities in MySQL server
---with a foreign key.
+-- SQL script to create the database hbtn_0d_usa and the table cities on the MySQL server
+
+-- Query to create the database if it does not already exist
 CREATE DATABASE IF NOT EXISTS hbtn_0d_usa;
-CREATE TABLE IF NOT EXISTS `hbtn_0d_usa`.`cities`(
-  `id` INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-  `state_id` INT NOT NULL,
-  `name` VARCHAR(256) NOT NULL,
-  FOREIGN KEY (`state_id`) REFERENCES `states`(`id`));
+
+-- Query to use the database hbtn_0d_usa
+USE hbtn_0d_usa;
+
+-- Query to create the table if it does not already exist
+CREATE TABLE IF NOT EXISTS cities (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    state_id INT NOT NULL,
+    name VARCHAR(256) NOT NULL
+    FOREIGN KEY (state_id) REFERENCES states(id)
+);
