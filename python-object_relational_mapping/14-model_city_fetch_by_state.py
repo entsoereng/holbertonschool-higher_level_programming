@@ -16,7 +16,7 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    
+
     # Fix syntax error and add missing import
     for instance in (session.query(State.name, City.id, City.name)
                      .filter(State.id == City.state_id)):
